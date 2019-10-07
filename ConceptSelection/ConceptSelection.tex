@@ -1,0 +1,330 @@
+\section{Concept Selection} 
+
+\newthought{Concept selection is the process} by which we decide upon the idea(s) that best satisfy the \ac{PDS}. These idea(s) are then selected for the detailed design stage. It is important that we use a means that provides an unbiased systematic process to evaluating our concepts. In this section, we discuss four such methods.
+
+\begin{enumerate}
+\item Controlled convergence
+\item Dot-sticking
+\item Multi-criteria decision analysis
+\item Weighted objectives tree
+\end{enumerate}
+
+\subsection{Controlled Convergence} Developed in the the 1980s by Stuart Pugh\cite{pugh1993}, Controlled Convergence uses a simple matrix to compare concepts against a set of pre-determined criteria.
+
+\cref{tbl-controlled-convergence} provides an example of a controlled convergence matrix. The rows contain the requirements from the \ac{PDS} and each column represents one of the concepts that have been generated.
+
+\begin{table}[ht!]
+  \center
+  \small
+  \caption{Example of Controlled Convergence}
+  \begin{tabular}{l c c c c}
+    \toprule
+    Criteria & Concept 1 & Concept 2 & Concept 3 & Concept 4 \\
+    \midrule
+    Ease of use &  & + & + & - \\
+    Aesthetic appeal & D & - & + & + \\
+    Manufacturability & A & + & + & - \\
+    Low weight & T & + & - & + \\
+    Energy efficiency & U & S & + & - \\
+    Safety & M & - & + & S \\
+    $\sum+$ & & 3 & 5 & 2 \\
+    $\sum-$ & & 2 & 1 & 3 \\
+    $\sum\text{S}$ & & 1 & 0 & 1 \\
+    \midrule
+    Net Score & 0 & 1 & 4 & -1 \\
+    Rank & 3 & 2 & 1 & 4 \\
+    \bottomrule
+  \end{tabular}
+  \label{tbl-controlled-convergence}
+\end{table}
+
+Taking one concept as a datum, we take the remaining concepts in turn and compare them to the datum with respect to each requirement. If the concept outperforms the datum on that criteria then a `$+$' should be placed in the table. A `$-$' if it under-performs and an `S' if it is the same as the datum. The assessment for each criteria can be subjective or objective. The important thing to remember is to record how you performed the assessment for each criteria.
+
+Once all the concepts have been evaluated, the scores are tallied and the concepts ordered based on their rank. The concept with the highest score is usually taken forward but it is important to also reflect upon the matrix and see if their are any features that could be combined to develop a concept that is potentially more suited to the \ac{PDS}.
+
+\subsection{Dot-Sticking}
+
+Dot sticking (\cref{fig-dot}) is the method of voting for your preferred concept to carry forward. The reviewers of the concepts are provided with sticky dots (on-line forms are increasingly used) and they are asked to place the dot on their preferred concept. Each concept should be presented in the same manner so as to avoid bias in the selection process.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.95\textwidth]{figs/dot-sticking.png}
+\caption{Dot sticking}
+\label{fig-dot}
+\end{figure}
+
+The technique is very simple and can be used to great effect when you need wider stakeholder engagement with the design process. In addition, it is very quick and can help reduce the number of concepts down to a small number in a short space of time. It is a very good tool to get initial feedback on the concepts you have generated.
+
+\subsection{Multi-Criteria Decision Analysis}
+
+\acf{MCDA} is very similar to the controlled convergence strategy in that it is a matrix formed of rows denoting your requirements and columns denoting your concepts. However, instead of using a datum concept, each concept is scored separately against the criteria and is typically performed using a Likert scoring scale (\cref{tbl-mcda}). Each requirement can also be weighted based on their priority/relative importance. The scores and weights are then summed to create an overall score for the concept. The concept with the greatest score is often considered the most suitable given the \ac{PDS}, but it is always important to reflect and investigate whether certain features of the other concepts can be merged/combined to generate a further, more refined concept.
+
+\begin{table*}[h!]
+\centering
+\caption{MCDA comparing two potential projects}\label{tbl-mcda}
+\begin{tabular}{l l l l l l}
+\toprule
+& & \multicolumn{2}{c}{Project A} & \multicolumn{2}{c}{Project B} \\
+Criteria & Weighting & Score & Weighted & Score & Weighted \\
+\midrule
+Compatibility with strategic objectives & 7
+& 4
+& 28
+& 4
+& 28 \\
+High Market Value
+& 9
+& 4
+& 36
+& 4
+& 36 \\
+Genuine advantages over competition
+& 9
+& 4
+& 36
+& 5
+& 45 \\
+Generate or save large amounts of money
+& 10
+& 4
+& 40
+& 4
+& 40 \\
+Contact with the market
+& 8
+& 4
+& 32
+& 4
+& 32 \\
+Technical expertise available
+& 4
+& 5
+& 20
+& 3
+& 12 \\
+Commercial expertise available
+& 7
+& 1
+& 7
+& 1
+& 7 \\
+Project management resources available
+& 4
+& 3
+& 12
+& 3
+& 12\\
+Clear route for implementation
+& 4
+& 2
+& 8
+& 2
+& 8 \\
+Evolving/lurking risk factors
+& 6
+& 2
+& 12
+& 2
+& 12 \\
+Compliance with industry standards
+& 3
+& 2
+& 6
+& 2
+& 6 \\
+Total 
+& 450
+& 44
+& 292
+& 46
+& 317 \\
+\midrule
+\% of Total & & 65\% & & 70\% \\
+Rank & & 2 & & 1 \\
+\bottomrule
+\end{tabular}
+\vspace{1em}
+\end{table*}
+
+\marginnote[3em]{Pair-Wise Comparison} Applying weightings to the requirements can be a challenge but methods do exist to help us generate these weightings. Pair-wise comparison is one such method where you take each requirement and compare it with all the other requirements in your \ac{PDS}. You then determine which requirement is more important for your design. Performing this across all your requirements forms a matrix of comparisons. These can be re-ordered to highlight the order of priority of your requirements. Taking the most important requirement as the highest weighted requirement, all the other requirements can then be scaled to match.
+
+\begin{table}
+\centering
+\caption{Pair-wise comparison for weighting requirements}
+\begin{tabular}{l l | l l l l l l l l l}
+\toprule
+Criteria & & A & B & C & D & E & F & G & H & I \\
+\midrule
+Functionality & A & - & A & C & D & A & F & A & AH & I \\
+Durability & B & - & - & C & D & B & B & B & H & BI \\
+Quality & C & - & - & - & D & C & F & C & H & C \\
+Affordability & D & - & - & - & - & D & F & D & D & I \\
+Manufacturability & E & - & - & - & - & - & F & E & H & E \\
+Usability & F & - & - & - & - & - & - & F & FH & I \\
+Maintainability & G & - & - & - & - & - & - & - & H & I \\
+Safety & H & - & - & - & - & - & - & - & - & I \\
+Marketability & I & - & - & - & - & - & - & - & - & - \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Weighted Objectives Tree}
+
+The Weighted Objectives Tree approach focuses on unpacking the design brief into lower-level requirements that can be assessed or measured through either quantitative and qualitative techniques (\cref{fig-wot}). Weighted Objectives Trees are particularly useful for highly-complex and inherently hierarchical products.
+
+\begin{figure*}[h!]
+\centering
+\footnotesize
+\vspace{-0.5cm}
+\begin{tikzpicture}
+
+  \node[] (Legend) at (0,6) {
+    \scriptsize
+    \begin{tabular}{|p{0.07\textwidth}|p{0.07\textwidth}|}
+      \midrule
+      \multicolumn{2}{|p{0.1\textwidth}|}{Requirement} \\
+      \midrule
+      Relative Weighting & Absolute Weighting \\
+      \midrule
+    \end{tabular}
+  };
+
+  \node[] (A) at (0,0) {
+    \begin{tabular}{|p{0.05\textwidth}|p{0.05\textwidth}|}
+      \midrule
+      \multicolumn{2}{|p{0.1\textwidth}|}{High Performance Mechanical Brake} \\
+      \midrule
+      1.0 & 1.0 \\
+      \midrule
+    \end{tabular}
+  };
+
+  \node[] (B) at (3,4) {
+    \begin{tabular}{|p{0.05\textwidth}|p{0.05\textwidth}|}
+      \midrule
+      \multicolumn{2}{|p{0.1\textwidth}|}{Reliable operation} \\
+      \midrule
+      0.5 & 0.5 \\
+      \midrule
+    \end{tabular}
+  };
+
+  \node[] (C) at (3,0) {
+    \begin{tabular}{|p{0.05\textwidth}|p{0.05\textwidth}|}
+      \midrule
+      \multicolumn{2}{|p{0.1\textwidth}|}{Low Mass} \\
+      \midrule
+      0.3 & 0.3 \\
+      \midrule
+    \end{tabular}
+  };
+
+  \node[] (D) at (3,-4) {
+    \begin{tabular}{|p{0.05\textwidth}|p{0.05\textwidth}|}
+      \midrule
+      \multicolumn{2}{|p{0.1\textwidth}|}{Compact} \\
+      \midrule
+      0.2 & 0.2 \\
+      \midrule
+    \end{tabular}
+  };
+
+  \node[] (E) at (6,5.5) {
+    \begin{tabular}{|p{0.05\textwidth}|p{0.05\textwidth}|}
+      \midrule
+      \multicolumn{2}{|p{0.1\textwidth}|}{Good reproducibility of friction levels} \\
+      \midrule
+      0.6 & 0.3 \\
+      \midrule
+    \end{tabular}
+  };
+
+  \node[] (F) at (6,2.5) {
+    \begin{tabular}{|p{0.05\textwidth}|p{0.05\textwidth}|}
+      \midrule
+      \multicolumn{2}{|p{0.1\textwidth}|}{Tolerance overloads} \\
+      \midrule
+      0.4 & 0.2 \\
+      \midrule
+    \end{tabular}
+  };
+
+  \node[] (G) at (6,0) {
+    \begin{tabular}{|p{0.05\textwidth}|p{0.05\textwidth}|}
+      \midrule
+      \multicolumn{2}{|p{0.1\textwidth}|}{Structurally Efficient} \\
+      \midrule
+      0.5 & 0.15 \\
+      \midrule
+    \end{tabular}
+  };
+
+  \node[] (H) at (6,-2.0) {
+    \begin{tabular}{|p{0.05\textwidth}|p{0.05\textwidth}|}
+      \midrule
+      \multicolumn{2}{|p{0.1\textwidth}|}{Thermally Efficient} \\
+      \midrule
+      0.5 & 0.15 \\
+      \midrule
+    \end{tabular}
+  };
+
+  \node[] (I) at (9,7.5) {
+    \begin{tabular}{|p{0.05\textwidth}|p{0.05\textwidth}|}
+      \midrule
+      \multicolumn{2}{|p{0.1\textwidth}|}{Insensitivity to moisture} \\
+      \midrule
+      0.8 & 0.24 \\
+      \midrule
+    \end{tabular}
+  };
+
+  \node[] (J) at (9,3.9) {
+    \begin{tabular}{|p{0.05\textwidth}|p{0.05\textwidth}|}
+      \midrule
+      \multicolumn{2}{|p{0.1\textwidth}|}{Insensitivity to vibration} \\
+      \midrule
+      0.2 & 0.06 \\
+      \midrule
+    \end{tabular}
+  };
+
+  \draw[] (12,8) -- (12,-5) node[pos=1.0, anchor=north] {$\sum 1.0$};
+  \draw[->] (A) |- (B);
+  \draw[->] (A) -- (C);
+  \draw[->] (A) |- (D);
+
+  \draw[->] (B) |- (E);
+  \draw[->] (B) |- (F);
+
+  \draw[->] (C) |- (G);
+  \draw[->] (C) |- (H);
+
+  \draw[->] (E) |- (I);
+  \draw[->] (E) |- (J);
+
+  \draw[->] (D) -- (12,-4) node[pos=1.0, anchor=west] {0.20};
+  \draw[->] (I) -- (12,7.5) node[pos=1.0, anchor=west] {0.24};
+  \draw[->] (J) -- (12,3.9) node[pos=1.0, anchor=west] {0.06};
+  \draw[->] (F) -- (12,2.5) node[pos=1.0, anchor=west] {0.20};
+  \draw[->] (G) -- (12,0) node[pos=1.0, anchor=west] {0.20};
+  \draw[->] (H) -- (12,-2) node[pos=1.0, anchor=west] {0.15};
+
+
+\end{tikzpicture}
+\vspace{1em}
+\caption{Weighted objectives tree}
+\label{fig-wot}
+\end{figure*}
+
+The high-level objective is usually given a weighting of 1.0. This value of unity has to be split amongst the next level of objectives. Taking the example in \cref{fig-wot}, it was decided that reliability was more important than low-mass and compactness by a factor of 0.5 to 0.3 to 0.2.
+
+These relative weightings have to be multiplied by the value of the weighting in the next level up to get the absolute weightings. Since the objective at the next level up has a value of unity, the absolute weightings are still 0.5, 0.3 and 0.2. This process is followed down to all the root-objectives. 
+
+At any particular level the relative weightings always add up to 1.0. The absolute weightings get smaller and smaller as the tree goes down to lower levels. By definition, the sum of the absolute weightings of all the root objectives must come to exactly 1.0.
+
+%\subsection{This Design Exercise}
+
+%In this design exercise, we would like you to follow the \ac{MCDA} method for selecting the concept that you will be taking forward. You should discuss the \ac{MCDA} method in your report and how you have applied it in your case. There should also be a discussion of the results and if there has been any consideration on merging features from multiple concepts.
+
+%Remember to try and make quantifiable comparisons as much as possible and we will be expecting you to perform some calculations in terms of areas and potential masses for each of the concepts.
